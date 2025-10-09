@@ -114,7 +114,7 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Components</span>
+                                <span>Authors</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
@@ -122,6 +122,23 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="{{ route('authors.index') }}">View Authors</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+
+                           <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Books</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="{{ route('books.create') }}">Add New Book Info</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('books.index') }}">View Books</a>
                                 </li>
                                
                             </ul>
