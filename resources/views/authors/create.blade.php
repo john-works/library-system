@@ -5,11 +5,7 @@
 
 
         <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
+           
 
             <div class="page-heading">
                 <div class="page-title">
@@ -29,17 +25,14 @@
                     </div>
                 </div>
 
-                
-
-
                 <!-- // Basic multiple Column Form section start -->
                 <section id="multiple-column-form">
                     <div class="row match-height">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <h4 class="card-title">Multiple Column</h4>
-                                </div>
+                                </div> --}}
                                 <div class="card-content">
                                     <div class="card-body">
                                         <form class="form">
@@ -48,45 +41,70 @@
                                                     <div class="form-group">
                                                         <label for="first-name-column">First Name</label>
                                                         <input type="text" id="first-name-column" class="form-control"
-                                                            placeholder="First Name" name="fname-column">
+                                                            placeholder="First Name" name="fname">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="last-name-column">Last Name</label>
                                                         <input type="text" id="last-name-column" class="form-control"
-                                                            placeholder="Last Name" name="lname-column">
+                                                            placeholder="Last Name" name="lname">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="city-column">City</label>
-                                                        <input type="text" id="city-column" class="form-control"
-                                                            placeholder="City" name="city-column">
+                                                        <label for="city-column">Sex</label>
+                                                        <select type="text" id="city-column" class="form-control"
+                                                            name="gender">
+
+                                                            <option>Select Gender</option>
+                                                            <option>Male</option>
+                                                            <option>Female</option>
+
+
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="country-floating">Country</label>
-                                                        <input type="text" id="country-floating" class="form-control"
-                                                            name="country-floating" placeholder="Country">
+                                                        <label for="address">Address</label>
+                                                        <input type="text" id="address" class="form-control"
+                                                            name="address" >
+                                                    </div>
+                                                </div>
+
+
+                                                 <div class="col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="category">Category</label>
+                                                        <select type="text" class="form-control"
+                                                            name="category" >
+
+                                                            <option>Selete one</option>
+                                                              <option>Love</option>
+                                                                <option>Environment</option>
+                                                                  <option>History</option>
+
+
+
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="company-column">Company</label>
-                                                        <input type="text" id="company-column" class="form-control"
-                                                            name="company-column" placeholder="Company">
+                                                        <label for="phone">Phone</label>
+                                                       <input type="text" class="form-control"
+                                                            name="phone" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Email</label>
                                                         <input type="email" id="email-id-column" class="form-control"
-                                                            name="email-id-column" placeholder="Email">
+                                                            name="email" placeholder="Email">
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-12">
+                                                {{-- <div class="form-group col-12">
                                                     <div class='form-check'>
                                                         <div class="checkbox">
                                                             <input type="checkbox" id="checkbox5"
@@ -94,7 +112,7 @@
                                                             <label for="checkbox5">Remember Me</label>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 <div class="col-12 d-flex justify-content-end">
                                                     <button type="submit"
                                                         class="btn btn-primary me-1 mb-1">Submit</button>
