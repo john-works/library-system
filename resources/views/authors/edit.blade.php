@@ -35,30 +35,30 @@
                                 </div> --}}
                                 <div class="card-content">
                                     <div class="card-body">
-                        <form action="{{ route('authors.store') }}" method="POST" class="form">
-                                    @csrf
-
+                                       <form action="{{ route('authors.update', $author->id) }}" method="POST">
+        @csrf
+        @method('PUT')
 
                                             <div class="row">
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="first-name-column">First Name</label>
                                                         <input type="text" id="first-name-column" class="form-control"
-                                                            placeholder="First Name" name="fname">
+                                                            placeholder="First Name" name="fname"   value="{{ old('fname', $author->fname) }}" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="last-name-column">Last Name</label>
                                                         <input type="text" id="last-name-column" class="form-control"
-                                                            placeholder="Last Name" name="lname">
+                                                            placeholder="Last Name" name="lname" value="{{ old('lname', $author->lname) }}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="city-column">Sex</label>
                                                         <select type="text" id="city-column" class="form-control"
-                                                            name="gender">
+                                                            name="gender" value="{{ old('gender', $author->gender) }}">
 
                                                             <option>Select Gender</option>
                                                             <option>Male</option>
@@ -72,7 +72,7 @@
                                                     <div class="form-group">
                                                         <label for="address">Address</label>
                                                         <input type="text" id="address" class="form-control"
-                                                            name="address" >
+                                                            name="address"value="{{ old('address', $author->address) }}">
                                                     </div>
                                                 </div>
 
@@ -81,7 +81,7 @@
                                                     <div class="form-group">
                                                         <label for="category">Category</label>
                                                         <select type="text" class="form-control"
-                                                            name="category" >
+                                                            name="category" value="{{ old('category', $author->category) }}">
 
                                                             <option>Selete one</option>
                                                               <option>Love</option>
@@ -97,14 +97,14 @@
                                                     <div class="form-group">
                                                         <label for="phone">Phone</label>
                                                        <input type="text" class="form-control"
-                                                            name="phone" >
+                                                            name="phone" value="{{ old('phone', $author->phone) }}" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="email-id-column">Email</label>
                                                         <input type="email" id="email-id-column" class="form-control"
-                                                            name="email" placeholder="Email">
+                                                            name="email" placeholder="Email" value="{{ old('email', $author->email) }}">
                                                     </div>
                                                 </div>
                                                 {{-- <div class="form-group col-12">

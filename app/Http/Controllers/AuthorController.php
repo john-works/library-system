@@ -30,7 +30,29 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+          $request->validate([
+
+'fname' =>'required',
+'lname' =>'required',
+'gender' =>'required',
+'address' =>'required',
+'email' =>'required',
+'phone' =>'required',
+'category' =>'required',
+
+
+
+
+        ]);
+
+        // Save supplier
+        Author::create($request->all());
+
+        return redirect()->route('authors.index')
+                         ->with('success', 'Author created successfully.');
+
+
     }
 
     /**
@@ -46,7 +68,8 @@ class AuthorController extends Controller
      */
     public function edit(Author $author)
     {
-        //
+        //   $items = Item::all(); 
+        return view('authors.edit', compact('author'));
     }
 
     /**
@@ -54,7 +77,22 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
-        //
+        
+        $request->validate([
+'fname' =>'required',
+'lname' =>'required',
+'gender' =>'required',
+'address' =>'required',
+'email' =>'required',
+'phone' =>'required',
+'category' =>'required',
+
+
+
+
+        ]);
+        $author->update($request->all());
+        return redirect()->route('authors.index');
     }
 
     /**
